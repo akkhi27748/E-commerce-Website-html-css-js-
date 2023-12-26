@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Permanent+Marker&family=Rubik+Maps&family=Rubik+Scribble&family=Source+Code+Pro&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html , body{
+    /* height: 100%; */
+    font-family: 'Cardo', serif;
+    overflow-x: hidden;
+}
+
+.navbar{
+    position: absolute;
+    /* width: 100%; */
+    margin:0 ;
+    transition: background-color 0.5s ease;
+}
+
+.bg-transparent{
+    background-color: transparent !important;
+}
+
+
+
+.nav-item{
+    
+    padding: 0 1rem;
+    margin: 0.5rem;
+
+}
+
+.nav-item:hover{
+    /* box-sizing: content-box; */
+    border: 1px solid #FF908B;
+    border-radius: 0.5rem;
+
+}
+
+.nav-link,.nav-link:hover{
+    color: white;
+    font-size: larger;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.logo{
+    width: 8%;
+}
+
+.fixed-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav-cart , .nav-search{
+    display: flex;
+    align-items: center;
+    color: white !important;
+    font-size: x-large;
+}
+
+
+.intro-summary{
+    /* font-family: "Rubik Scribble" , cursive; */
+    height: 75vh;
+    background: url(../Vector/the-95-best-online-clothing-stores-in-the-us.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+/* .intro-img{
+width: 30%;
+} */
+
+.intro-details{
+    width: 40%;
+    /* height: 60%; */
+    padding: 2.5rem 1.5rem;
+    flex-direction: column;
+}
+
+.slogan{
+    font-size: 1.9rem;
+}
+
+#slogan-dynamic{
+    font-family: "Permanent Marker" , sans-serif;
+}
+
+.description{
+    font-size: large;
+}
+
+
+.btn-explore{
+    width: max-content;
+    padding-left: 0%;
+    background-color: #FF908B!important;
+    color: white;
+    padding: 0.5rem 1rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn-explore:hover{
+    background-color: white!important;
+    border: 2px solid #FF908B;
+    color: black;
+}
+
+.card{
+    border: none;
+    
+}
+
+.card:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.pro-img:hover{
+    transform: scale(1.04);
+}
+
+.pro-img{
+    height: 40vh; 
+    padding: 2rem 0;
+    border-radius: 10%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-title{
+    font-weight: bold;
+}
+
+.view-btn:hover{
+    background-color: #FF908B;
+    
+
+}
+
+/*Popular Product*/
+
+.pro-name{
+    height: 5vh;
+    margin-bottom: 2rem;
+}
+
+/*search modal style*/
+.recent-searches {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Style for each recent search item */
+.recent-searches ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.recent-searches li {
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.recent-searches li:hover {
+    text-decoration: underline;
+}
+
+.section-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cool-underline {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.cool-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8vw;
+    height: 6px;
+    border-radius: 50px;
+    background-color: #FF908B;
+    transition: width 0.3s ease-in-out;
+}
+
+.cool-underline:hover::after {
+    
+    width: 4vw;
+    
+}
+
+
+/*footer section*/
+
+.footer-section{
+    color: white;
+    background-color: #444242;
+    font-family: 'Source Code Pro' , Arial, Helvetica, sans-serif;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.content-items{
+    width: 20vw;
+}
+
+.content-items>h4{
+    padding-bottom: 2rem;
+    font-size: x-large;
+    font-weight: 600
+}
+
+.footer-list{
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-list>a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.footer-list-items{
+    font-size: larger;
+}
+
+.footer-list-items>i{
+    font-size: x-large;
+}
+
+.footer-list-items>i:hover{
+    color: #FF908B;
+}
+
+.created-credits{
+    font-size: .7em;
+    color: rgb(173, 173, 173);
+
+}
