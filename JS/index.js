@@ -86,3 +86,60 @@ function typeEffect() {
 
 // Start the typewriter effect
 typeEffect();
+
+
+
+// Function to fetch products from the fake API
+function fetchProducts() {
+    fetch('https://fakeapi.com/products')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(products => {
+            displayProducts(products);
+        })
+        .catch(error => {
+            console.error('There was a problem fetching the products:', error);
+        });
+}
+
+// Function to display products on the UI
+function displayProducts(products) {
+  const productsContainer = document.getElementById("productsContainer");
+
+  // Clear any existing content in the container
+  productsContainer.innerHTML = "";
+
+  products.forEach((product) => {
+    // Create Bootstrap card element
+    const productCard = document.createElement("div");
+    productCard.classList.add("col-md-4", "mb-4"); // Adjust column width and margins as needed
+
+    productCard.innerHTML = `
+            <div class="card">
+                <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                <div class="card-body">
+                    <h5 class="card-title">${product.name}</h5>
+                    <p class="card-text">Price: $${product.price}</p>
+                    <p class="card-text">${product.description}</p>
+                    <!-- Add more product details or buttons as needed -->
+                    <button onclick="addToCart(${product.id})" class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        `;
+
+    // Append each product card to the products container
+    productsContainer.appendChild(productCard);
+  });
+}
+
+// Call the function to fetch and display products when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    fetchProducts();
+});
+
+
+
