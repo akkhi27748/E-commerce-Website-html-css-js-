@@ -29,7 +29,7 @@
                 </button>
                 <ul class="navbar-nav mb-2 mb-lg-0 nav-list">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                        <a class="nav-link" aria-current="page" href="./dashboard.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./product.html">Products</a>
@@ -40,14 +40,18 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./about.html">About</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link d-flex gap-2 align-items-center" href="./account.html"><i
-                                class="fa-solid fa-user"></i><span>Account</span></a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link d-flex gap-2 align-items-center dropdown-toggle" role="button"
+                            data-bs-toggle="dropdown"><i class="fa-solid fa-user"></i><span>Account</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a id="logout" class="dropdown-item" role="button" onclick="logout()">Logout</a></li>
+                        </ul>
                     </li>
-                    <a class="btn nav-cart" href="./cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
-
+                    <a class="btn nav-cart" href="./cart.html"><i class="fa-solid fa-bag-shopping"><span
+                                class="badge">0</span></i></a>
+    
                 </ul>
-
+    
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
@@ -55,15 +59,13 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h1 class="modal-title fs-5" id="exampleModalLabel">Search</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <form class="d-flex" role="search">
                                     <input class="form-control me-2" id="searchInput" type="search" placeholder="Search"
                                         aria-label="Search">
-                                    <button class="btn btn-outline-success" type="submit"
-                                        onclick="performSearch()">Search</button>
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
                                 </form>
                                 <hr>
                                 <div class="recent-searches text-center">
@@ -71,10 +73,14 @@
                                     <ul id="recentList"></ul>
                                 </div>
                             </div>
+                            <!-- <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Search</button>
+                                    </div> -->
                         </div>
                     </div>
                 </div>
-
+    
             </div>
         </div>
     </nav>

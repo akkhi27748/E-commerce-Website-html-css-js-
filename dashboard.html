@@ -66,7 +66,7 @@
                                         <input class="form-control me-2" id="searchInput" type="search"
                                             placeholder="Search" aria-label="Search">
                                         <button class="btn btn-outline-success" type="submit"
-                                            onclick="performSearch()">Search</button>
+                                            >Search</button>
                                     </form>
                                     <hr>
                                     <div class="recent-searches text-center">
@@ -85,13 +85,14 @@
                 </div>
             </div>
         </nav>
+
+
         <div class="row d-flex intro-summary align-items-center">
             <!-- <div class="intro-img col-6"><img
                     src="./Vector/seasonal-sale-discounts-presents-purchase-visiting-boutiques-luxury-shopping-price-reduction-promoti/Wavy_Bus-17_Single-09.jpg"
                     alt="" class="img-fluid"></div> -->
             <div class="intro-details col-6 d-flex gap-3">
-                <h2 class="solgan">Your Ultimate Destination for <br> <span id="slogan-dynamic">Seamless
-                        Shopping</span>.</h2>
+                <h2 class="solgan">Your Ultimate Destination for <br> <span id="slogan-dynamic"></span>.</h2>
                 <p class="description">Welcome to ezyShopping, your all-in-one destination for effortless online
                     shopping experiences!
                     Discover a world where convenience meets quality, where every click opens the door to a vast array
@@ -157,16 +158,17 @@
         <hr>
     </div>
 
-    <section id ="productsContainer" class="container popularProducts">
+    <section  class="container popularProducts">
         <div class="section-heading">
             <h2 class="text-center mb-5 cool-underline">Popular Products</h2>
         </div>
         
 
-        <div class="category-list row justify-content-evenly gx-4 gy-3 py-5">
+        <div id ="productsContainer" class="category-list row justify-content-evenly gx-4 gy-3 py-5">
+
             <div class="card" style="width: 18rem;">
-                <img src="./images/popular product/wirelessearbuds-2048px-8829.jpg"
-                    class="card-img-top img-fluid pro-img" alt="watches">
+                <img src="./images/popular product/wirelessearbuds-2048px-8829.jpg" class="card-img-top img-fluid pro-img"
+                    alt="watches">
                 <div class="card-body">
                     <h5 class="card-title pro-name">Earbud pro 2</h5>
                     <p class="card-text">₹3499</p>
@@ -174,22 +176,20 @@
                     <a href="#" class="card-link btn btn-outline-primary">Add to Cart</a>
                 </div>
             </div>
-
+            
             <div class="card" style="width: 18rem;">
-                <img src="./images/popular product/vaccumcleaner.avif" class="card-img-top img-fluid pro-img"
-                    alt="shoes">
+                <img src="./images/popular product/vaccumcleaner.avif" class="card-img-top img-fluid pro-img" alt="shoes">
                 <div class="card-body">
                     <h5 class="card-title pro-name">Electrolux Vaccum Cleaner</h5>
                     <p class="card-text">₹5499</p>
                     <div class="card-button d-flex">
                         <a href="#" class="card-link btn btn-outline-success">Buy Now</a>
                         <a href="#" class="card-link btn btn-outline-primary">
-                            <!-- <i class="fa-solid fa-cart-shopping"></i><br> -->
                             Add to Cart</a>
                     </div>
                 </div>
             </div>
-
+            
             <div class="card" style="width: 18rem;">
                 <img src="./images/popular product/iphone.webp" class="card-img-top img-fluid pro-img" alt="hoodies">
                 <div class="card-body">
@@ -199,7 +199,7 @@
                     <a href="#" class="card-link btn btn-outline-primary">Add to Cart</a>
                 </div>
             </div>
-
+            
             <div class="card" style="width: 18rem;">
                 <img src="./images/popular product/sunglasses.png" class="card-img-top img-fluid pro-img" alt="shirts">
                 <div class="card-body">
@@ -208,10 +208,42 @@
                     <a href="#" class="card-link btn btn-outline-success">Buy Now</a>
                     <a href="#" class="card-link btn btn-outline-primary">Add to Cart</a>
                 </div>
-            </div>
+            </div> 
+            
         </div>
 
     </section>
+
+    <!--to give a gap between section-->
+    <div class="container py-5">
+        <hr>
+    </div>
+
+
+    <section class="container-fluid productCarousel">
+
+        <div class="section-heading">
+            <h2 class="text-center mb-5 cool-underline">Special Offers</h2>
+        </div>
+
+        <div id="specialOffer" class="container-fluid carousel slide d-flex justify-content-center" data-bs-ride="carousel" data-bs-pause="false">
+            
+            <div id="specialOfferInner" class="row carousel-inner ">
+                <!--Displaying images from javascrip-->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#specialOffer"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#specialOffer"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
 
     <!--to give a gap between section-->
     <div class="container py-5">
@@ -262,8 +294,6 @@
             </div>
         </din>
 
-        <hr>
-
         <div class="footer-copyright text-center">
             <h6 class="copyright-details">Copyright &copy; 2023 ezyShopping.com all rights reserved.</h6>
             <span class="created-credits">Created by Akhilesh Upadhyaya</span>
@@ -279,8 +309,54 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
     <script src="./JS/index.js"></script>
+    <script src="./JS/specialOfferCarousel.js"></script>
     <script src="./JS/authenticate.js"></script>
 
 </body>
 
 </html>
+
+
+<!-- <div class="card" style="width: 18rem;">
+    <img src="./images/popular product/wirelessearbuds-2048px-8829.jpg" class="card-img-top img-fluid pro-img"
+        alt="watches">
+    <div class="card-body">
+        <h5 class="card-title pro-name">Earbud pro 2</h5>
+        <p class="card-text">₹3499</p>
+        <a href="#" class="card-link btn btn-outline-success">Buy Now</a>
+        <a href="#" class="card-link btn btn-outline-primary">Add to Cart</a>
+    </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+    <img src="./images/popular product/vaccumcleaner.avif" class="card-img-top img-fluid pro-img" alt="shoes">
+    <div class="card-body">
+        <h5 class="card-title pro-name">Electrolux Vaccum Cleaner</h5>
+        <p class="card-text">₹5499</p>
+        <div class="card-button d-flex">
+            <a href="#" class="card-link btn btn-outline-success">Buy Now</a>
+            <a href="#" class="card-link btn btn-outline-primary">
+                Add to Cart</a>
+        </div>
+    </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+    <img src="./images/popular product/iphone.webp" class="card-img-top img-fluid pro-img" alt="hoodies">
+    <div class="card-body">
+        <h5 class="card-title pro-name">iPhone 15 pro max</h5>
+        <p class="card-text">₹89,999</p>
+        <a href="#" class="card-link btn btn-outline-success">Buy Now</a>
+        <a href="#" class="card-link btn btn-outline-primary">Add to Cart</a>
+    </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+    <img src="./images/popular product/sunglasses.png" class="card-img-top img-fluid pro-img" alt="shirts">
+    <div class="card-body">
+        <h5 class="card-title pro-name">Vincent Chase</h5>
+        <p class="card-text">₹3999</p>
+        <a href="#" class="card-link btn btn-outline-success">Buy Now</a>
+        <a href="#" class="card-link btn btn-outline-primary">Add to Cart</a>
+    </div>
+</div> -->

@@ -4,16 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
+    <title>ezyShopping</title>
     <link rel="shortcut icon" href="./favicon/ezyshopping-favicon-color.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./CSS/index.css">
-    <link rel="stylesheet" href="./CSS/product.css">
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-transparent">
         <div class="container-fluid">
             <a class="navbar-brand logo" href="./index.html"><img
@@ -44,14 +42,15 @@
                         <a class="nav-link d-flex gap-2 align-items-center dropdown-toggle" role="button"
                             data-bs-toggle="dropdown"><i class="fa-solid fa-user"></i><span>Account</span></a>
                         <ul class="dropdown-menu">
-                            <li><a id="logout" class="dropdown-item" role="button" onclick="logout()">Logout</a></li>
+                            <li><a id="logout" class="dropdown-item" role="button" onclick="logout()">Logout</a>
+                            </li>
                         </ul>
                     </li>
                     <a class="btn nav-cart" href="./cart.html"><i class="fa-solid fa-bag-shopping"><span
                                 class="badge">0</span></i></a>
-    
+
                 </ul>
-    
+
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
@@ -59,14 +58,14 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h1 class="modal-title fs-5" id="exampleModalLabel">Search</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <form class="d-flex" role="search">
                                     <input class="form-control me-2" id="searchInput" type="search" placeholder="Search"
                                         aria-label="Search">
-                                    <button class="btn btn-outline-success" type="submit"
-                                        onclick="performSearch()">Search</button>
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
                                 </form>
                                 <hr>
                                 <div class="recent-searches text-center">
@@ -75,33 +74,23 @@
                                 </div>
                             </div>
                             <!-- <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Search</button>
-                                    </div> -->
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Search</button>
+                                </div> -->
                         </div>
                     </div>
                 </div>
-    
+
             </div>
         </div>
     </nav>
 
-    <section id="cartContainer" class="container cartSection">
-        <div class="section-heading">
-            <h2 class="text-center mb-5 cool-underline">Shopping Cart</h2>
-        </div>
-    
-        <div id="cartItems" class="row justify-content-evenly gx-4 gy-3 py-5">
-            
-        </div>
-    
-        <div class="row justify-content-center">
-            <div class="col-auto">
-                <p class="total-amount">Total: ₹Total Amount</p>
-                <button class="btn btn-primary">Checkout</button>
-            </div>
-        </div>
-    </section>
+    <!--to give a gap between section-->
+    <div class="container py-5">
+        <hr>
+    </div>
+
+
 
 
     <!--to give a gap between section-->
@@ -190,9 +179,9 @@
                 </ul>
             </div>
         </din>
-    
+
         <hr>
-    
+
         <div class="footer-copyright text-center">
             <h6 class="copyright-details">Copyright &copy; 2023 ezyShopping.com all rights reserved.</h6>
             <span class="created-credits">Created by Akhilesh Upadhyaya</span>
@@ -208,7 +197,8 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
     <script src="./JS/index.js"></script>
-    <script src="./JS/cart.js"></script>
+    <script src="./JS/authenticate.js"></script>
 
 </body>
+
 </html>

@@ -27,7 +27,7 @@
                 </button>
                 <ul class="navbar-nav mb-2 mb-lg-0 nav-list">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                        <a class="nav-link" aria-current="page" href="./dashboard.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./product.html">Products</a>
@@ -38,11 +38,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./about.html">About</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link d-flex gap-2 align-items-center" href="./account.html"><i
-                                class="fa-solid fa-user"></i><span>Account</span></a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link d-flex gap-2 align-items-center dropdown-toggle" role="button"
+                            data-bs-toggle="dropdown"><i class="fa-solid fa-user"></i><span>Account</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a id="logout" class="dropdown-item" role="button" onclick="logout()">Logout</a></li>
+                        </ul>
                     </li>
-                    <a class="btn nav-cart" href="./cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+                    <a class="btn nav-cart" href="./cart.html"><i class="fa-solid fa-bag-shopping"><span
+                                class="badge">0</span></i></a>
     
                 </ul>
     
@@ -59,8 +63,7 @@
                                 <form class="d-flex" role="search">
                                     <input class="form-control me-2" id="searchInput" type="search" placeholder="Search"
                                         aria-label="Search">
-                                    <button class="btn btn-outline-success" type="submit"
-                                        onclick="performSearch()">Search</button>
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
                                 </form>
                                 <hr>
                                 <div class="recent-searches text-center">
@@ -80,9 +83,9 @@
         </div>
     </nav>
 
-
+    
     <div class="container-fluid products d-flex align-items-lg-start justify-content-between">
-        <div class="row container-fluid col-md-2">
+        <div class="row col-md-2 py-4 m-1 shadow bg-body-tertiary rounded">
             <h4>Filter</h4>
             <hr>
             <div class="accordion" id="accordionPanelsStayOpenExample">
@@ -230,71 +233,8 @@
 
         </div>
 
-        <div class="row container-fluid product col-md-10">
-            <div class="card product-item">
-                <img src="./images/product/watch.jpg" class="card-img-top img-fluid img-product" alt="watch">
-                <div class="card-body">
-                    <p class="card-text">Minimals Analog Watch</p>
-                    <span>₹5999</span>
-                    <p>50% off</p>
-                </div>
-            </div>
-            <div class="card product-item">
-                <img src="./images/product/watch.jpg" class="card-img-top img-fluid img-product" alt="watch">
-                <div class="card-body">
-                    <p class="card-text">Minimals Analog Watch</p>
-                    <span>₹5999</span>
-                    <p>50% off</p>
-                </div>
-            </div>
-            <div class="card product-item">
-                <img src="./images/product/watch.jpg" class="card-img-top img-fluid img-product" alt="watch">
-                <div class="card-body">
-                    <p class="card-text">Minimals Analog Watch</p>
-                    <span>₹5999</span>
-                    <p>50% off</p>
-                </div>
-            </div>
-            <div class="card product-item">
-                <img src="./images/product/watch.jpg" class="card-img-top img-fluid img-product" alt="watch">
-                <div class="card-body">
-                    <p class="card-text">Minimals Analog Watch</p>
-                    <span>₹5999</span>
-                    <p>50% off</p>
-                </div>
-            </div>
-            <div class="card product-item">
-                <img src="./images/product/watch.jpg" class="card-img-top img-fluid img-product" alt="watch">
-                <div class="card-body">
-                    <p class="card-text">Minimals Analog Watch</p>
-                    <span>₹5999</span>
-                    <p>50% off</p>
-                </div>
-            </div>
-            <div class="card product-item">
-                <img src="./images/product/watch.jpg" class="card-img-top img-fluid img-product" alt="watch">
-                <div class="card-body">
-                    <p class="card-text">Minimals Analog Watch</p>
-                    <span>₹5999</span>
-                    <p>50% off</p>
-                </div>
-            </div>
-            <div class="card product-item">
-                <img src="./images/product/watch.jpg" class="card-img-top img-fluid img-product" alt="watch">
-                <div class="card-body">
-                    <p class="card-text">Minimals Analog Watch</p>
-                    <span>₹5999</span>
-                    <p>50% off</p>
-                </div>
-            </div>
-            <div class="card product-item">
-                <img src="./images/product/watch.jpg" class="card-img-top img-fluid img-product" alt="watch">
-                <div class="card-body">
-                    <p class="card-text">Minimals Analog Watch</p>
-                    <span>₹5999</span>
-                    <p>50% off</p>
-                </div>
-            </div>
+        <div id="productsContainer" class="row product col-md-10 justify-content-evenly gx-4 gy-3 py-2 shadow bg-body-tertiary rounded">
+           
 
         </div>
     </div>
@@ -406,6 +346,7 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
     <script src="./JS/index.js"></script>
+    <script src="./JS/displayProducts.js"></script>
     <script src="./JS/authenticate.js"></script>
 
     

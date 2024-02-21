@@ -1,9 +1,47 @@
 // Sample products data (can be fetched from an API or elsewhere)
-const products = [
-  { id: 1, name: "Product 1", price: 10 },
-  { id: 2, name: "Product 2", price: 20 },
-  // Add more product items as needed
-];
+
+//https://dummyjson.com/carts
+function fetchProducts() {
+  fetch("https://dummyjson.com/carts")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then((carts) => {
+      console.log(carts);
+      displayCartProducts(carts.products);
+    })
+    .catch((error) => {
+      console.error("There was a problem fetching the products:", error);
+    });
+}
+
+function displayCartProducts(cartProduct) {
+  const cartItems = document.querySelector("#cartItems");
+
+  cartItems.innerHTML = "";
+
+  for (let i = 0; i < cartProduct.length; i++) {
+    var productCard = document.createElement("div");
+    productCard.classList.add("col-md-3", "mb-3"); // Adjust column width and margins as needed
+
+    cartItems.innerHTML = `
+    <div class="card item-card">
+    <img src="${cartProduct[i].i}" alt="Item Image" class="item-image">
+    <div class="item-details">
+        <h3 class="item-name">Item Name</h3>
+        <p class="item-description">Item Description</p>
+        <p class="item-category">Category: </p>
+        <p class="item-price">Price: $</p>
+        <p class="item-stock">In Stock: </p>
+        <!-- Add other details as provided by the API -->
+    </div>
+</div>
+`;
+  }
+}
 
 // Initialize an empty cart
 let cart = [];
@@ -62,7 +100,6 @@ function renderCart() {
 // Example: Add a product to the cart (using product ID)
 addToCart(1);
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const decreaseButtons = document.querySelectorAll(".decrease-btn");
   const increaseButtons = document.querySelectorAll(".increase-btn");
@@ -90,4 +127,8 @@ document.addEventListener("DOMContentLoaded", () => {
       // You can trigger an update or send data to a backend here
     });
   });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  fetchProducts();
 });
